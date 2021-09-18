@@ -1,0 +1,61 @@
+.mainmenu
+  .image-wrapper
+    = image_tag "yasai.jpg", class: "main-img"
+    .image-title
+      %p.image-text オカンの畑
+      %p.image-text OFFICIAL
+      %p.image-text SITE
+  %h2.main-title SITEMENU
+  .menu-list
+    = link_to fields_path, class: "menu-link" do
+      = image_tag "field.png", class: "menu-icon"
+      .menu-content
+        %h3 畑を選ぶ
+        %p FIELD
+        .span
+          .mini-line.y-mini-line
+          .bold-line.y-bold-line
+    = link_to schedules_path, class: "menu-link" do
+      = image_tag "calendar.png", class: "menu-icon"
+      .menu-content
+        %h3 カレンダー
+        %p CALENDAR
+        .span
+          .mini-line.b-mini-line
+          .bold-line.b-bold-line
+    = link_to maps_path, class: "menu-link" do
+      = image_tag "layout.png", class: "menu-icon"
+      .menu-content
+        %h3 畑レイアウト
+        %p LAYOUT
+        .span
+          .mini-line.g-mini-line
+          .bold-line.g-bold-line
+  .schedule
+    %h2.main-title 作業予定
+    .schedule-contents
+      - 3.times do |i|
+        = link_to "#", class: "schedule-content" do
+          .task-date.content-wrap
+            %p.content-name ・予定日
+            %p.task-date-db 2021年10月10日
+          .product-name.content-wrap
+            %p.content-name ・作物
+            %p.product-name-db ジャガイモ
+          .task-name.content-wrap
+            %p.content-name ・作業内容
+            %p.task-name-db 土壌調整(苦石)
+  .recent-tasks
+    %h2.main-title 最近の作業
+    .schedule-contents
+      - 3.times do |i|
+        = link_to "#", class: "schedule-content" do
+          .task-date.content-wrap
+            %p.content-name ・予定日
+            %p.task-date-db 2021年10月10日
+          .product-name.content-wrap
+            %p.content-name ・作物
+            %p.product-name-db ジャガイモ
+          .task-name.content-wrap
+            %p.content-name ・作業内容
+            %p.task-name-db 土壌調整(苦石)

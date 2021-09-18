@@ -1,0 +1,16 @@
+.mainmenu
+  .image-wrapper
+    = image_tag "yasai.jpg", class: "main-img"
+    .image-title
+      %p.image-text オカンの畑
+      %p.image-text 全作物の
+      %p.image-text 予定/履歴
+
+  .calendar
+    .calendar-menu
+      %h2.calendar-menu-text 全作物の作業履歴/予定
+    .calendar-wrapper
+      = month_calendar do |date|
+        = date.day
+        = link_to product_path(1), class: "product-links" do
+          %p.product-link 堆肥（にんじん）

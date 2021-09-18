@@ -1,0 +1,103 @@
+.img-text-wrapper {
+  position: relative;
+  .kakashi {
+    position: absolute;
+    width: 12vw;
+    bottom: -12px;
+    right: -16px;
+  }
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff9ea;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-top: 20px;
+  &-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    border-bottom: 1px solid #000;
+    padding: 30px 5px 0;
+    .fields-title {
+      font-size: 24px;
+    }
+    .new-field-btn {
+      padding: 3px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  }
+  &-contents {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .field-content{
+      background: linear-gradient(#ffe6b1, #ffcd62f5);
+      background-color: #ffe6b1;
+      padding: 8px;
+      display: block;
+      width: 90%;
+      margin-top: 16px;
+      border: 1px solid #000;
+      border-radius: 8px;
+      h3, h4, li, p {
+        color: #000;
+        border-bottom: 1px solid #000;
+      }
+      h4 {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      .hatake-name {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      .content-wrapper {
+        width: 100%;
+      }
+      .field-products {
+        display: flex;
+        
+      }
+      .field-task {
+        display: flex;
+        justify-content: space-between;
+        .task {
+          border-bottom: none;
+        }
+      }
+      .field-footer {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        &-content {
+          width: 250px;
+          display: flex;
+          .field-btn {
+            display: inline-block;
+            line-height: 30px;
+            width: 260px;
+            color: #fff;
+            padding: 0 8px;
+            margin-left: 12px;
+            margin-top: 12px;
+            border-radius: 8px;
+          }
+          .edit-btn {
+            background-color: #237c00;
+          }
+          .delete-btn {
+            background-color: #990000;
+          }
+        }
+        
+      }
+    }
+  }
+}

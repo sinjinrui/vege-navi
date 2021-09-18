@@ -1,0 +1,11 @@
+.field {
+  display: flex;
+  .field-name {
+    width: 95vw;
+    border-bottom: 1px solid #000;
+    &-text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}

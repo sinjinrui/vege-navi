@@ -1,0 +1,40 @@
+.mainmenu
+  .image-wrapper
+    = image_tag "yasai.jpg", class: "main-img"
+    .image-title
+      %p.image-text 一覧から
+      %p.image-text HATAKEを
+      .img-text-wrapper
+        %p.image-text を選ぶ
+        = image_tag "kakashi.png", class: "kakashi"
+
+  .fields
+    .fields-menu
+      %h2.fields-title 畑一覧
+      = link_to "新しいHATAKE", "#", class: "new-field-btn btn btn-warning"
+    .fields-contents
+      - 3.times do |i|
+        .field-content
+          = link_to field_path(1), class: "content-wrapper" do
+            .field-name
+              %h3.hatake-name おらが畑#{i + 1}
+            %h4 育てている作物：
+            %ul.field-products
+              %li.field-ptoduct にんじん,
+              %li.field-ptoduct ジャガイモ,
+              %li.field-ptoduct ホウレンソウ,
+              %li.field-ptoduct 里芋,
+              %li.field-ptoduct 大根,
+            .field-tasked-date
+              %h4 最終作業日：
+              %p yyyy/mm/dd
+            .field-last-task
+              %h4 最近完了した作業：
+              %P 追肥（ジャガイモ）
+            .field-footer
+              .field-footer-content
+                = link_to "編集する", "#", class: "field-btn edit-btn"
+                = link_to "削除する", "#", class: "field-btn delete-btn"
+
+
+
