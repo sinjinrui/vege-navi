@@ -1,0 +1,17 @@
+.login-wrapper
+  = image_tag "logo.png", class: "login-logo"
+  %p.notice= notice
+  %p.alert= alert
+  .login
+    .login-form
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          = f.label :username, "ユーザー名"
+          %br/
+          = f.text_field :username, autofocus: true, autocomplete: "username", class: "session-field"
+        .field
+          = f.label :password, "パスワード"
+          %br/
+          = f.password_field :password, autocomplete: "current-password", class: "session-field"
+        .actions
+          = f.submit "ログイン", class: "session-btn btn btn-success"

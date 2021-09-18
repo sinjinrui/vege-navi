@@ -1,0 +1,30 @@
+.mainmenu
+  .image-wrapper
+    = image_tag "yasai.jpg", class: "main-img"
+    .image-title
+      %p.image-text オカンの畑
+      %p.image-text レイアウト
+      %p.image-text 研究所
+  .maps
+    .maps-menu
+      %h2.maps-title 作成したレイアウト一覧
+      = link_to "新規レイアウト", "#", class: "new-map-btn btn btn-warning"
+    - 5.times do |i|
+      .map-name
+        %p レイアウト名
+      = link_to map_path(1), class: "map-link" do
+        .map
+          .map-line
+            .map-piece
+            .map-piece
+            .map-piece
+          .map-line
+            .map-piece
+            .map-piece
+            .map-piece
+          .map-line
+            .map-piece
+            .map-piece
+            .map-piece
+
+    

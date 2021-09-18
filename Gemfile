@@ -60,3 +60,4 @@ gem 'devise-i18n-views'
 gem "haml-rails", "~> 2.0"
 gem 'font-awesome-sass'
 gem 'pry-rails'
+gem 'simple_calendar', '~> 2.0'

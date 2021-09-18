@@ -1,0 +1,36 @@
+.mainmenu
+  .image-wrapper
+    = image_tag "yasai.jpg", class: "main-img"
+    .image-title
+      %p.image-text おらが畑
+      %p.image-text にんじんの
+      .img-text-wrapper
+        %p.image-text 記録
+        = image_tag "kakashi.png", class: "kakashi"
+
+  .tasks
+    .tasks-menu
+      %h2.tasks-title 作業履歴
+    .tasks-contents
+      - 3.times do |i|
+        .task-content
+          .task-name
+            %h4.task-main-name 肥料
+            %h4.task-sub-name 堆肥（堆）
+          %ul.task-tasks
+            %li.task-date
+              %p.task-day 作業日
+              %p.task-day yyyy/mm/dd
+          %h5.task-topic-title 備考
+          %p.task-topic ここに備考を記入します。改行対応予定です。
+          .field-footer
+            .field-footer-content
+              = link_to "編集する", "#", class: "field-btn edit-btn"
+              = link_to "削除する", "#", class: "field-btn delete-btn"
+  .calendar
+    .calendar-menu
+      %h2.calendar-menu-text にんじんの作業履歴/予定
+    .calendar-wrapper
+      = month_calendar do |date|
+        = date.day
+  

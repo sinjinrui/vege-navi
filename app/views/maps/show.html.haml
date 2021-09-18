@@ -1,0 +1,21 @@
+.main-menu
+  .maps
+    .maps-menu
+      %h2.maps-title レイアウト名
+      = link_to "削除する", "#", class: "new-map-btn btn btn-danger"
+    .map-name
+      %p 変更を加えたいマスをクリックorタップしてください
+    = link_to map_path(1), class: "map-link" do
+      .map
+        .map-line
+          .map-piece
+          .map-piece
+          .map-piece
+        .map-line
+          .map-piece
+          .map-piece
+          .map-piece
+        .map-line
+          .map-piece
+          .map-piece
+          .map-piece
